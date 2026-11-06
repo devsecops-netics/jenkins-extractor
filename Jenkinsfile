@@ -52,7 +52,7 @@ pipeline {
 
     stage('Extract') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'jenkins-api-extractor',
+        withCredentials([usernamePassword(credentialsId: 'svc-metrics',
                                           usernameVariable: 'JENKINS_API_USER',
                                           passwordVariable: 'JENKINS_API_TOKEN')]) {
           // comillas simples: el token no pasa por interpolación Groovy
